@@ -1,24 +1,40 @@
 {
-  "name": "open-tg-sdk-react",
+  "name": "@ton-builders/open-tg-sdk-react",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A TypeScript Demo SDK for Telegram Web Apps with React integration",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && rollup -c",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "@types/debug": "^4.1.12",
-    "@types/node": "^22.13.13",
-    "@types/node-fetch": "^2.6.12",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
-  },
+  "keywords": [
+    "telegram",
+    "webapp",
+    "react",
+    "typescript"
+  ],
+  "author": "Your Name <your-email@example.com>",
+  "license": "MIT",
   "dependencies": {
-    "debug": "^4.4.0",
-    "node-fetch": "^3.3.2"
-  }
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "rollup": "^3.29.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "files": [
+    "dist"
+  ]
 }
